@@ -47,7 +47,7 @@
   }
 
   .quote-section {
-    @apply col-span-2 col-start-7 row-start-3 flex flex-col justify-center font-reddit text-base text-right text-[#0c4832] leading-none;
+    @apply col-span-2 col-start-7 row-start-3 flex flex-col justify-center font-reddit text-[15px] text-right text-[#0c4832] leading-none;
   }
 
   .project-nav {
@@ -88,7 +88,7 @@
   }
 
   .nav-item__text {
-    @apply font-reddit text-base text-[#0c4832] leading-[21px] flex-grow;
+    @apply font-reddit text-[15px] text-[#0c4832] leading-[18px] flex-grow;
   }
 
   /* Project Image Component */
@@ -99,23 +99,23 @@
 
   /* Typography Components */
   .heading-primary {
-    @apply font-financier-regular text-[48px] leading-[52px] text-[#0c4832] w-full;
+    @apply font-financier-regular text-[42px] leading-[45px] text-[#0c4832] w-full;
   }
 
   .heading-secondary {
-    @apply font-financier-light text-[48px] leading-[52px] text-[#0c4832] w-full;
+    @apply font-financier-light text-[42px] leading-[45px] text-[#0c4832] w-full;
   }
 
   .body-text {
-    @apply font-reddit text-base text-left text-[#0c4832] leading-[21px];
+    @apply font-reddit text-[15px] text-left text-[#0c4832] leading-[18px];
   }
 
   .body-text-container {
-    @apply flex flex-col justify-end font-reddit text-base text-left text-[#0c4832] leading-none max-w-[744px];
+    @apply flex flex-col justify-end font-reddit text-[15px] text-left text-[#0c4832] leading-none max-w-[744px];
   }
 
   .quote-text {
-    @apply leading-[21px];
+    @apply leading-[18px];
   }
 
   /* Utility Components */
