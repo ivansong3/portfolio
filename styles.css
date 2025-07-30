@@ -1,0 +1,50 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Financier+Display:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Typography Classes */
+.font-financier-regular {
+    font-family: 'Test Financier Display', serif;
+    font-weight: 400;
+}
+
+.font-financier-light {
+    font-family: 'Test Financier Display', serif;
+    font-weight: 300;
+}
+
+.font-reddit {
+    font-family: 'Reddit Mono', monospace;
+    font-weight: 400;
+}
+
+/* Interactive Elements */
+.nav-button:hover {
+    background-color: rgba(12, 72, 50, 0.05);
+}
+
+.nav-item:hover {
+    opacity: 1;
+}
+
+.project-image {
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.02);
+}
+
+/* Project Images Background Styles */
+.project-image-1 {
+    background-image: url('http://localhost:3845/assets/72a5c852ad3f72ce8e0be0808d1d80d3ab38d531.png');
+}
+
+.project-image-2 {
+    background-image: url('http://localhost:3845/assets/7f12ea1300756f144a0fb5daaf68dbfc01103a46.png');
+}
+
+/* Vector Shape Positioning */
+.vector-shape {
+    left: 9.788%;
+    right: 26.19%;
+}
