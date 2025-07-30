@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,78 +11,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-[#fffdf7] text-[#0c4832] h-screen w-screen overflow-hidden">
-    <div class="grid grid-cols-12 grid-rows-5 gap-6 p-0 h-full w-full relative">
-        
+    <div class="main-grid">
+
         <!-- Headline Section -->
-        <header class="col-span-6 row-span-1 flex flex-col justify-start items-start pt-6 pl-6 pb-0 pr-0" data-name="Headline">
-            <h1 class="font-financier-regular text-[48px] leading-[52px] text-[#0c4832] w-full">Ivan Song</h1>
-            <h2 class="font-financier-light text-[48px] leading-[52px] text-[#0c4832] w-full">designing simple but powerful tools</h2>
+        <header class="headline-section" data-name="Headline">
+            <h1 class="heading-primary">Ivan Song</h1>
+            <h2 class="heading-secondary">designing simple but powerful tools</h2>
         </header>
-        
+
         <!-- Project Carousel -->
-        <section class="col-span-3 col-start-10 row-span-1 flex flex-col justify-start items-start p-0 self-start" data-name="ProjectCarousel">
-            <div class="w-full h-[297.06px] bg-center bg-cover bg-no-repeat project-image project-image-1" data-name="ProjectImage"></div>
-            <div class="w-full h-[297.06px] bg-center bg-cover bg-no-repeat project-image project-image-2" data-name="ProjectImage"></div>
-            <div class="w-full h-[297.06px] bg-center bg-cover bg-no-repeat project-image project-image-2" data-name="ProjectImage"></div>
-            <div class="w-full h-[297.06px] bg-center bg-cover bg-no-repeat project-image project-image-2" data-name="ProjectImage"></div>
-            <div class="w-full h-[297.06px] bg-center bg-cover bg-no-repeat project-image project-image-2" data-name="ProjectImage"></div>
+        <section class="project-carousel" data-name="ProjectCarousel">
+            <div class="project-image-card project-image-1" data-name="ProjectImage"></div>
+            <div class="project-image-card project-image-2" data-name="ProjectImage"></div>
+            <div class="project-image-card project-image-2" data-name="ProjectImage"></div>
+            <div class="project-image-card project-image-2" data-name="ProjectImage"></div>
+            <div class="project-image-card project-image-2" data-name="ProjectImage"></div>
         </section>
-        
+
         <!-- Navigation Group -->
-        <nav class="col-start-1 row-start-3 flex flex-col gap-2 justify-center items-start p-0" data-name="NavGroup">
-            <button class="nav-button flex items-center justify-start gap-2 pl-6 pr-3 py-1 border-t border-b border-[#0c4832] relative" data-name="NavButton">
-                <img src="http://localhost:3845/assets/19c5c36dca5c9d9afe5fe5081ccc4977b326a651.svg" alt="Suitcase" class="w-[14px] h-[14px]" data-name="Suitcase">
-                <span class="font-reddit text-[18px] uppercase text-[#0c4832] leading-[23px] whitespace-nowrap">WORK</span>
+        <nav class="nav-group" data-name="NavGroup">
+            <button class="nav-button nav-button--active" data-name="NavButton">
+                <img src="http://localhost:3845/assets/19c5c36dca5c9d9afe5fe5081ccc4977b326a651.svg" alt="Suitcase"
+                    class="nav-button__icon" data-name="Suitcase">
+                <span class="nav-button__text">WORK</span>
             </button>
-            <button class="nav-button flex items-center justify-start gap-2 px-6 py-1" data-name="NavButton">
-                <img src="http://localhost:3845/assets/15fc13b6ad2f4e1c5a091e9d1ca23e64bc8ce51f.svg" alt="Circle" class="w-[14px] h-[14px]" data-name="Circle">
-                <span class="font-reddit text-[18px] uppercase text-[#0c4832] leading-[23px] whitespace-nowrap">PLAY</span>
+            <button class="nav-button" data-name="NavButton">
+                <img src="http://localhost:3845/assets/15fc13b6ad2f4e1c5a091e9d1ca23e64bc8ce51f.svg" alt="Circle"
+                    class="nav-button__icon" data-name="Circle">
+                <span class="nav-button__text">PLAY</span>
             </button>
-            <button class="nav-button flex items-center justify-start gap-2 px-6 py-1" data-name="NavButton">
-                <div class="w-[14px] h-[14px] relative" data-name="Person">
-                    <img src="http://localhost:3845/assets/5f6001ad16c20b4e45c144a5a5c70bbaabe612ee.svg" alt="Person" class="w-full h-full absolute bottom-0 left-1/2 top-[-0.049%] -translate-x-1/2">
+            <button class="nav-button" data-name="NavButton">
+                <div class="person-icon" data-name="Person">
+                    <img src="http://localhost:3845/assets/5f6001ad16c20b4e45c144a5a5c70bbaabe612ee.svg" alt="Person">
                 </div>
-                <span class="font-reddit text-[18px] uppercase text-[#0c4832] leading-[23px] whitespace-nowrap">ABOUT</span>
+                <span class="nav-button__text">ABOUT</span>
             </button>
         </nav>
-        
+
         <!-- Quote Section -->
-        <div class="col-span-2 col-start-7 row-start-3 flex flex-col justify-center font-reddit text-[16px] text-right text-[#0c4832] leading-none">
-            <p class="leading-[21px]">how to simplify license conversion?</p>
+        <div class="quote-section">
+            <p class="quote-text">how to simplify license conversion?</p>
         </div>
-        
+
         <!-- Project Navigation -->
-        <aside class="col-start-9 row-start-3 flex flex-col gap-2 justify-center items-start p-0" data-name="ProjectNav">
-            <div class="nav-item opacity-30 flex items-center justify-start gap-2.5 w-full px-0 py-1" data-name="NavItem">
-                <span class="font-reddit text-[16px] text-[#0c4832] leading-[21px] flex-grow">BLUEFORCE</span>
+        <aside class="project-nav" data-name="ProjectNav">
+            <div class="nav-item" data-name="NavItem">
+                <span class="nav-item__text">BLUEFORCE</span>
             </div>
-            <div class="nav-item opacity-30 flex items-center justify-start gap-2.5 w-full px-0 py-1" data-name="NavItem">
-                <span class="font-reddit text-[16px] text-[#0c4832] leading-[21px] flex-grow">GOLDFISH</span>
+            <div class="nav-item" data-name="NavItem">
+                <span class="nav-item__text">GOLDFISH</span>
             </div>
-            <div class="nav-item flex items-center justify-start gap-2.5 w-full px-0 py-1 rounded-l-[5px]" data-name="NavItem">
-                <span class="font-reddit text-[16px] text-[#0c4832] leading-[21px] flex-grow">CISCO</span>
+            <div class="nav-item nav-item--active" data-name="NavItem">
+                <span class="nav-item__text">CISCO</span>
             </div>
-            <div class="nav-item opacity-30 flex items-center justify-start gap-2.5 w-full px-0 py-1" data-name="NavItem">
-                <span class="font-reddit text-[16px] text-[#0c4832] leading-[21px] flex-grow">SAP</span>
+            <div class="nav-item" data-name="NavItem">
+                <span class="nav-item__text">SAP</span>
             </div>
-            <div class="nav-item opacity-30 flex items-center justify-start gap-2.5 w-full px-0 py-1" data-name="NavItem">
-                <span class="font-reddit text-[16px] text-[#0c4832] leading-[21px] flex-grow">SCOPESTYLE</span>
+            <div class="nav-item" data-name="NavItem">
+                <span class="nav-item__text">SCOPESTYLE</span>
             </div>
         </aside>
-        
+
         <!-- Paragraph Section -->
-        <footer class="col-span-8 col-start-1 row-start-5 flex items-end justify-start gap-2.5 pb-6 pl-6 pr-0 pt-0" data-name="Paragraph section">
-            <div class="flex flex-col justify-end font-reddit text-[16px] text-left text-[#0c4832] leading-none max-w-[744px]">
-                <p class="leading-[21px]">I aim to find elegant ways to solve user problems by striking the right balance between product, business, and users to transform complex use cases into simple and powerful tools. Always eager to listen, learn, and adapt.</p>
+        <footer class="paragraph-section" data-name="Paragraph section">
+            <div class="body-text-container">
+                <p class="body-text">I aim to find elegant ways to solve user problems by striking the right balance
+                    between product, business, and users to transform complex use cases into simple and powerful tools.
+                    Always eager to listen, learn, and adapt.</p>
             </div>
         </footer>
-        
+
         <!-- Vector Shape -->
-        <div class="absolute h-[982.639px] top-[229.6px] vector-shape" data-name="Vector shape">
-            <img src="http://localhost:3845/assets/8c079197ba685fcb0c9b80d995bede379b2a9bb2.svg" alt="" class="w-full h-full">
+        <div class="vector-shape" data-name="Vector shape">
+            <img src="http://localhost:3845/assets/8c079197ba685fcb0c9b80d995bede379b2a9bb2.svg" alt=""
+                class="w-full h-full">
         </div>
-        
+
     </div>
 </body>
+
 </html>

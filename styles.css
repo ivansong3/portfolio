@@ -1,6 +1,16 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Financier+Display:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+/* Design System Variables */
+@layer base {
+  :root {
+    --color-brand: #0c4832;
+    --color-bg: #fffdf7;
+    --font-display: 'Test Financier Display', serif;
+    --font-mono: 'Reddit Mono', monospace;
+  }
+}
+
 /* Typography Classes */
 .font-financier-regular {
     font-family: 'Test Financier Display', serif;
@@ -17,21 +27,115 @@
     font-weight: 400;
 }
 
-/* Interactive Elements */
-.nav-button:hover {
-    background-color: rgba(12, 72, 50, 0.05);
-}
+/* Tailwind Component Classes */
+@layer components {
+  /* Layout Components */
+  .main-grid {
+    @apply grid grid-cols-12 grid-rows-5 gap-6 p-0 h-full w-full relative;
+  }
 
-.nav-item:hover {
-    opacity: 1;
-}
+  .headline-section {
+    @apply col-span-6 row-span-1 flex flex-col justify-start items-start pt-6 pl-6 pb-0 pr-0;
+  }
 
-.project-image {
-    transition: transform 0.3s ease;
-}
+  .project-carousel {
+    @apply col-span-3 col-start-10 row-span-1 flex flex-col justify-start items-start p-0 self-start;
+  }
 
-.project-image:hover {
-    transform: scale(1.02);
+  .nav-group {
+    @apply col-start-1 row-start-3 flex flex-col gap-2 justify-center items-start p-0;
+  }
+
+  .quote-section {
+    @apply col-span-2 col-start-7 row-start-3 flex flex-col justify-center font-reddit text-base text-right text-[#0c4832] leading-none;
+  }
+
+  .project-nav {
+    @apply col-start-9 row-start-3 flex flex-col gap-2 justify-center items-start p-0;
+  }
+
+  .paragraph-section {
+    @apply col-span-8 col-start-1 row-start-5 flex items-end justify-start gap-2.5 pb-6 pl-6 pr-0 pt-0;
+  }
+
+  /* Nav Button Component */
+  .nav-button {
+    @apply flex items-center justify-start gap-2 px-6 py-1 
+           font-reddit text-lg uppercase text-[#0c4832] leading-[23px] 
+           whitespace-nowrap transition-colors hover:bg-[#0c4832]/5 relative;
+  }
+
+  .nav-button--active {
+    @apply border-t border-b border-[#0c4832] pl-6 pr-3;
+  }
+
+  .nav-button__icon {
+    @apply w-[14px] h-[14px];
+  }
+
+  .nav-button__text {
+    @apply font-reddit text-lg uppercase text-[#0c4832] leading-[23px] whitespace-nowrap;
+  }
+
+  /* Project Navigation Component */
+  .nav-item {
+    @apply flex items-center justify-start gap-2.5 w-full px-0 py-1 
+           opacity-30 hover:opacity-100 transition-opacity;
+  }
+
+  .nav-item--active {
+    @apply opacity-100 rounded-l-[5px];
+  }
+
+  .nav-item__text {
+    @apply font-reddit text-base text-[#0c4832] leading-[21px] flex-grow;
+  }
+
+  /* Project Image Component */
+  .project-image-card {
+    @apply w-full h-[297.06px] bg-center bg-cover bg-no-repeat 
+           transition-transform hover:scale-105;
+  }
+
+  /* Typography Components */
+  .heading-primary {
+    @apply font-financier-regular text-[48px] leading-[52px] text-[#0c4832] w-full;
+  }
+
+  .heading-secondary {
+    @apply font-financier-light text-[48px] leading-[52px] text-[#0c4832] w-full;
+  }
+
+  .body-text {
+    @apply font-reddit text-base text-left text-[#0c4832] leading-[21px];
+  }
+
+  .body-text-container {
+    @apply flex flex-col justify-end font-reddit text-base text-left text-[#0c4832] leading-none max-w-[744px];
+  }
+
+  .quote-text {
+    @apply leading-[21px];
+  }
+
+  /* Utility Components */
+  .vector-shape {
+    @apply absolute h-[982.639px] top-[229.6px];
+    left: 9.788%;
+    right: 26.19%;
+  }
+
+  .icon-small {
+    @apply w-[14px] h-[14px];
+  }
+
+  .person-icon {
+    @apply w-[14px] h-[14px] relative;
+  }
+
+  .person-icon img {
+    @apply w-full h-full absolute bottom-0 left-1/2 top-[-0.049%] -translate-x-1/2;
+  }
 }
 
 /* Project Images Background Styles */
@@ -41,10 +145,4 @@
 
 .project-image-2 {
     background-image: url('http://localhost:3845/assets/7f12ea1300756f144a0fb5daaf68dbfc01103a46.png');
-}
-
-/* Vector Shape Positioning */
-.vector-shape {
-    left: 9.788%;
-    right: 26.19%;
 }
