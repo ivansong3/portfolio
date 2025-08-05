@@ -1,4 +1,3 @@
-
 /* Font Face Declarations */
 @font-face {
     font-family: 'Test Financier Display';
@@ -16,54 +15,92 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'PP Eiko';
+    src: url('./fonts/pp-eiko-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* Figma Design System Variables */
 :root {
-  /* Colors */
-  --brand: #0C4832;
-  --background-color: #FFFDF7;
-  
-  /* Typography */
-  --font-display: 'Test Financier Display', serif;
-  --font-mono: 'Reddit Mono', monospace;
+    /* Colors */
+    --brand: #0C4832;
+    --background-color: #FFFDF7;
+
+    /* Typography */
+    --font-display: 'Test Financier Display', serif;
+    --font-mono: 'Reddit Mono', monospace;
 }
 
 /* Design System Typography Classes */
 
-/* H1 Regular - Complete style from Figma */
-.h1-regular {
-    font-family: var(--font-display);
-    font-size: 42px;
-    font-weight: 400;
-    line-height: 45px;
-    color: var(--brand);
-}
-
 /* H1 Light - Complete style from Figma */
 .h1-light {
-    font-family: var(--font-display);
-    font-size: 42px;
+    font-family: 'PP Eiko', sans-serif;
+    font-size: 40px;
     font-weight: 300;
     line-height: 45px;
     color: var(--brand);
 }
 
-/* Paragraph - Complete style from Figma */
+/* Navigation Button Text - Reddit Mono 18px uppercase */
+.nav-button-text {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.45px;
+    color: var(--brand);
+    text-transform: uppercase;
+}
+
+/* Paragraph Text - Reddit Mono 15px regular casing */
 .paragraph-text {
     font-family: var(--font-mono);
     font-size: 15px;
     font-weight: 400;
     line-height: 18px;
+    letter-spacing: 0.45px;
     color: var(--brand);
 }
 
-/* Nav Button Text - Complete style from Figma */
-.nav-button-text {
+/* Case Detail Text - Reddit Mono 15px lowercase */
+.case-detail-text {
     font-family: var(--font-mono);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 18px;
+    letter-spacing: 0.45px;
+    color: var(--brand);
+    text-transform: lowercase;
+}
+
+/* Project Navigation Text - Reddit Mono 15px uppercase */
+.project-nav-text {
+    font-family: var(--font-mono);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.45px;
     color: var(--brand);
     text-transform: uppercase;
+}
+
+/* Navigation Button States */
+.nav-button-selected {
+    opacity: 1;
+}
+
+.nav-button-default {
+    opacity: 0.35;
+}
+
+.nav-button-default:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
 
