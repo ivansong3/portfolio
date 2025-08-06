@@ -1,21 +1,5 @@
 /* Font Face Declarations */
 @font-face {
-    font-family: 'Test Financier Display';
-    src: url('./fonts/test-financier-display-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Test Financier Display';
-    src: url('./fonts/test-financier-display-light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'PP Eiko';
     src: url('./fonts/PPEiko-Light.otf') format('opentype');
     font-weight: 300;
@@ -31,7 +15,7 @@
     --background-color: #FFFDF7;
 
     /* Typography */
-    --font-display: 'Test Financier Display', serif;
+    --font-display: 'PP Eiko', sans-serif;
     --font-mono: 'Reddit Mono', monospace;
 }
 
@@ -39,7 +23,7 @@
 
 /* H1 Light - Complete style from Figma */
 .h1-light {
-    font-family: 'PP Eiko', sans-serif;
+    font-family: var(--font-display);
     font-size: 40px;
     font-weight: 300;
     line-height: 47px;
