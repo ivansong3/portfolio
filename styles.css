@@ -96,3 +96,37 @@
 .project-image-2 {
     background-image: url('http://localhost:3845/assets/7f12ea1300756f144a0fb5daaf68dbfc01103a46.png');
 }
+
+.project-image-3 {
+    background-image: url('https://picsum.photos/400/300?random=1');
+}
+
+.project-image-4 {
+    background-image: url('https://picsum.photos/400/300?random=2');
+}
+
+.project-image-5 {
+    background-image: url('https://picsum.photos/400/300?random=3');
+}
+
+/* Infinite Scroll Animations */
+[data-name="ProjectNav"] {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 170px;
+    position: relative;
+}
+
+[data-name="ProjectCarousel"] {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+[data-name="NavItem"] {
+    transition: opacity 0.3s ease;
+}
+
+.project-image {
+    transition: opacity 0.3s ease-in-out;
+}
