@@ -10,6 +10,7 @@ class InfiniteScroll {
         this.itemHeight = 34; // Height of nav items
         this.imageHeight = 297.06; // Height of images
 
+
         this.init();
     }
 

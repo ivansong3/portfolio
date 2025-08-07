@@ -1,6 +1,14 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'PP Eiko';
+    src: url('./fonts/PPEiko-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Eiko';
     src: url('./fonts/PPEiko-Light.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
@@ -21,11 +29,11 @@
 
 /* Design System Typography Classes */
 
-/* H1 Light - Complete style from Figma */
-.h1-light {
+/* H1 - Complete style from Figma */
+.h1 {
     font-family: var(--font-display);
     font-size: 40px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 47px;
     color: var(--brand);
 }
